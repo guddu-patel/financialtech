@@ -1,0 +1,18 @@
+@import "/src/styles.scss";
+
+.nav-item a{
+    margin: 0 25px;
+    color: map-get($theme-colors, cblacklt);
+    &:hover{
+        color:map-get($theme-colors, cprimary);
+    }
+}
+.nav-btn button{
+    margin: 0 10px;
+    border: 2px solid map-get($theme-colors, cprimary);
+    width: 120px;
+    height: 42px;
+}
+.bg-cprimary-gradient{
+    background: linear-gradient(to right,map-get($theme-colors, cprimarylt) ,map-get($theme-colors, cprimary))
+}

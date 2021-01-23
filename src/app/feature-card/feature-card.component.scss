@@ -1,0 +1,29 @@
+@import "/src/styles.scss";
+.feature-card{
+    border-radius: 20px;
+    margin-bottom: 20px;
+    max-width: 300px;
+    .card-img{
+        width: 75px;
+        height: 75px;
+    }
+    h6{
+        font-family: mont-semibold;
+        margin: 10px 0;
+        font-size: 15px;
+    }
+    p{
+        margin: 0;
+        font-family: mont-regular;
+        font-size: 15px;
+        color: #999999;
+
+    }
+    &:hover{
+        background-color: map-get($theme-colors, cprimarylt);
+        color: white!important;
+        p{
+            color: white;
+        }
+    }
+}

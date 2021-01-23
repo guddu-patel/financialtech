@@ -1,1 +1,103 @@
 /* You can add global styles to this file, and also import other style files */
+/* custom.scss */    
+
+/* import the necessary Bootstrap files */
+// Required
+@import "node_modules/bootstrap/scss/bootstrap";
+
+@font-face {
+  font-family: mont-regular;
+  src: url(assets/font/Montserrat-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: mont-medium;
+  src: url(assets/font/Montserrat-Medium.ttf) format("truetype");
+}
+@font-face {
+  font-family: mont-semibold;
+  src: url(assets/font/Montserrat-SemiBold.ttf) format("truetype");
+}
+@font-face {
+  font-family: mont-bold;
+  src: url(assets/font/Montserrat-Bold.ttf) format("truetype");
+}
+@font-face {
+  font-family: pingfang-regular;
+  src: url("assets/font/PingFang SC Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: pingfang-medium;
+  src: url("assets/font/PingFang Medium.ttf") format("truetype");
+}
+body{
+  font-family: mont-medium!important;
+}
+nav {
+    background-color: transparent;
+
+  .navbar-brand {
+      img{
+          height: 80px;
+          width: 80px;
+    transition: all 0.3s ease;
+
+      }
+  }
+	.navbar-toggle {margin: 13px 15px 13px 0;}
+	a {
+		font-size: 18px;
+    transition: all 0.3s ease;
+	}
+}
+
+
+
+nav.navbar.shrink {
+    min-height: 35px;
+    background-color: #fff;
+  .navbar-brand {
+    img{
+        height: 60px;
+        width: 60px;
+    }
+  }
+ 
+  .navbar-toggle {
+    margin: 8px 15px 8px 0;
+    padding: 4px 5px;
+  }
+}
+.spliter{
+  max-width: 236px;
+  height: 6px;
+  background: #222222 0% 0% no-repeat padding-box;
+  border-radius: 13px;
+  margin: 10px 0;
+}
+
+$theme-colors: (
+  cprimarydark:#4c2574,
+   cprimary: #663399,
+   cprimarylt: #9F62C9,
+   cgreylt:#FCFCFF,
+   cgreydark:#00000033,
+   cblacklt:#222222,
+   cblackdark:#222222,
+   cwhite:#fff
+);
+/* ------- customize primary buttons -------- */   
+$mynewcolor:map-get($theme-colors, cprimary);
+
+.btn-cprimary {
+  color: linear-gradient(to right, red , blue);
+    @include button-variant($mynewcolor, darken($mynewcolor, 7.5%), darken($mynewcolor, 10%), lighten($mynewcolor,5%), lighten($mynewcolor, 10%), darken($mynewcolor,30%));
+}
+
+.btn-outline-cprimary {
+    @include button-outline-variant($mynewcolor, #222222, lighten($mynewcolor,5%), $mynewcolor);
+}
+// @import "node_modules/bootstrap/scss/bootstrap";
+button.btn:hover{
+  color: #fff;
+  background:map-get($theme-colors, cprimarydark)!important;
+}
