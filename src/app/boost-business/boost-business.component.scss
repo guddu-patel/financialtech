@@ -14,6 +14,10 @@
         left: 0;
         z-index: -1;
     }
+    .featureItem{
+        max-width: max-content!important;
+    }
+
 }
 .featuredescription{
     padding-left: 60px;
@@ -42,8 +46,11 @@
     }
     .featureContainer {
         .solwave-back-img{
-        bottom: -2%;
-    }
+            bottom: -2%;
+        }
+        .featureItem{
+            margin: auto;
+        }
     }
 }
 @media only screen and (max-width: 767px){
