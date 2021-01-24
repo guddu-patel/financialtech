@@ -15,3 +15,40 @@
         z-index: -1;
     }
 }
+.featuredescription{
+    padding-left: 60px;
+    padding-right: 60px;
+    hr{
+        background-color: #707070;
+        width: 120px;
+    }
+    button{
+        border-width: 2px;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .featuredescription{
+        padding-left: 10px;
+    padding-right: 10px;
+        h1{
+
+            font-size: 30px;
+        }
+        .openAccDes{
+            font-size: 15px;
+            width: 80%;
+        }
+    }
+    .featureContainer {
+        .solwave-back-img{
+        bottom: -2%;
+    }
+    }
+}
+@media only screen and (max-width: 767px){
+
+    .featuredescription{
+        margin-top: 35px!important;
+    }
+}

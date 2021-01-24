@@ -32,6 +32,10 @@
 body{
   font-family: mont-medium!important;
 }
+*{
+  line-height: 1.5!important;
+  
+}
 nav {
     background-color: transparent;
 
@@ -78,6 +82,7 @@ nav.navbar.shrink {
 $theme-colors: (
   cprimarydark:#4c2574,
    cprimary: #663399,
+   cprimarytrans: #9f62c97a,
    cprimarylt: #9F62C9,
    cgreylt:#FCFCFF,
    cgreydark:#00000033,

@@ -5,11 +5,11 @@
     <div class="small-circle">
         <img src="/assets/img/blob-small.svg" alt="">
     </div>
-    <section class="eligibility px-5">
+    <section class="eligibility">
 
-        <div class="row ">
+        <div class="row mx-0">
             <div class="col-lg-6 big-header">
-                <h1 class="ml-5">
+                <h1>
                     We make it Super Simple
 
                     <hr class="spliter">
@@ -19,30 +19,34 @@
                     <img class="dotted-img" src="/assets/img/accounting_dots.svg" alt="">
                 </div>
             </div>
-            <div class="col-lg-6 eligibility-calc row">
+            <div class="col-lg-6 eligibility-calc row mx-0">
                 <div class="card shadow-lg col p-0">
                     <div class="card-header text-center">
                         Eligibility Calculator
                     </div>
-                    <div class="p-3 text-secondary pb-5">
+                    <div class="p-3 text-secondary pb-4">
                         <form [formGroup]="loanForm" class="borderBtmForm">
                             <div>
 
-                                <p class="small text-dark">Monthly Income</p>
+                                <p class="small text-dark">Monthly Income
+                                </p>
                                 <h4 class="font-weight-bold">&#8377; {{loanForm.value.monthlyIncome}}</h4>
                                 <div data-role="rangeslider">
-                                    <input type="range" class="slider" formControlName="monthlyIncome" min="100000"
-                                        max="300000">
+                                    <input type="range" class="slider" [min]="income.min"
+                                        formControlName="monthlyIncome" [max]="income.max"
+                                        (input)="onRangeChange(income)" [(ngModel)]="income.current"
+                                        [ngStyle]="{'background': 'linear-gradient(to right, #663399  0%, #663399 '+income.percent+'%, #e7daff 0%, #e7daff 100%)'}">
                                 </div>
-                                <p class="small text-dark text-muted my-2"> &#8377; 100000
-                                    <span class="float-right">&#8377; 300000</span>
+                                <p class="small text-dark text-muted my-2"> &#8377; {{income.min}}
+                                    <span class="float-right">&#8377; {{income.max}}</span>
                                 </p>
                             </div>
                             <div>
                                 <p class="small text-dark">Monthly Expense</p>
                                 <h4 class="font-weight-bold">&#8377; {{loanForm.value.monthlyExpense}}</h4>
-                                <input type="range" class="slider" formControlName="monthlyExpense" min="0"
-                                    max="100000">
+                                <input type="range" class="slider" formControlName="monthlyExpense" [min]="expense.min"
+                                    [max]="expense.max" (change)="onRangeChange(expense)" [(ngModel)]="expense.current"
+                                    [ngStyle]="{'background': 'linear-gradient(to right, #663399  0%, #663399 '+expense.percent+'%, #e7daff 0%, #e7daff 100%)'}">
                             </div>
                             <div>
 

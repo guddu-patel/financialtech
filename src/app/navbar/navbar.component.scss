@@ -16,3 +16,8 @@
 .bg-cprimary-gradient{
     background: linear-gradient(to right,map-get($theme-colors, cprimarylt) ,map-get($theme-colors, cprimary))
 }
+@media only screen and (max-width: 767px){
+    .navbar-brand {
+        margin: 0!important;
+    }
+}

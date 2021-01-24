@@ -3,6 +3,7 @@
     border-radius: 20px;
     margin-bottom: 20px;
     max-width: 300px;
+    transition: background .8s;
     .card-img{
         width: 75px;
         height: 75px;
@@ -20,7 +21,7 @@
 
     }
     &:hover{
-        background-color: map-get($theme-colors, cprimarylt);
+        background-color: map-get($theme-colors, cprimarytrans);
         color: white!important;
         p{
             color: white;
