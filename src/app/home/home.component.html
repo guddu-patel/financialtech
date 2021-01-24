@@ -45,7 +45,7 @@
                                 <p class="small text-dark">Monthly Expense</p>
                                 <h4 class="font-weight-bold">&#8377; {{loanForm.value.monthlyExpense}}</h4>
                                 <input type="range" class="slider" formControlName="monthlyExpense" [min]="expense.min"
-                                    [max]="expense.max" (change)="onRangeChange(expense)" [(ngModel)]="expense.current"
+                                    [max]="expense.max" (input)="onRangeChange(expense)" [(ngModel)]="expense.current"
                                     [ngStyle]="{'background': 'linear-gradient(to right, #663399  0%, #663399 '+expense.percent+'%, #e7daff 0%, #e7daff 100%)'}">
                             </div>
                             <div>
